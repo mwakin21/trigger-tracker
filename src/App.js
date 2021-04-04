@@ -11,8 +11,8 @@ function App() {
   return (
     <div className="App">
       <Router>
+        {/* put Header here to apply to all pages */}
         <Switch>
-          {/* Add new pages here */}
           <Route exact path={'/'} component={Home} />
           <Route exact path={'/movie-1'}>
             <ReviewPage title='Movie 1' description='Description here' />
@@ -20,6 +20,7 @@ function App() {
           <Route exact path={'/movie-2'}>
             <ReviewPage title='Movie 2' description='Description here' />
           </Route>
+          {/* Add new pages here */}
         </Switch>
       </Router>
 

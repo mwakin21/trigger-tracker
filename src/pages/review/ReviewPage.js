@@ -1,7 +1,10 @@
 import React from 'react';
 
 const ReviewPage = (props) => {
-    const [title, description] = [props.title, props.description];
+    const data = props.data;
+    // to see what data is available or add more, check pages/home/movie-data.js
+    // access members in data here:
+    const [title, description] = [data.title, data.description];
     return (
         <div>
             {title}

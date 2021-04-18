@@ -14,7 +14,9 @@ function App() {
       <Router>
         {/* put Header here to apply to all pages */}
         <Switch>
-          <Route exact path={'/'} component={Home} data={data} />
+          <Route exact path={'/'} >
+            <Home data={data} />
+          </Route>
           {data.map((movie, key) => (
             <Route exact path={movie.url} key={key}>
               <ReviewPage data={movie} />

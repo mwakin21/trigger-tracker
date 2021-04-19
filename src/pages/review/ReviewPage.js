@@ -12,7 +12,11 @@ const ReviewPage = (props) => {
 
         <div class="left-col">
             <h2>{title}</h2>
-            <h3>Movwie Description: {description}</h3>
+            <h3>Movie Description: {description}</h3>
+            <h2> Reported Trigring Timestamps </h2>
+            {timestamps.map((time,key) => (
+                <h3>{time.start.m}:{time.start.s} - {time.stop.m}:{time.stop.s}</h3>
+            ))}
         </div>
         <div class="center-col">
             <h2>Photosensitivity Review:</h2>

@@ -1,0 +1,21 @@
+.card {
+    background-color: #7dbdbb;
+    padding: 1em;
+    padding-left: 2em;
+    height: 100%;
+    border: 3px solid #363636;
+}
+
+.poster {
+    border: 3px solid #363636;
+    border-radius: 5px;
+}
+
+.card-text {
+    font-size: 0.75rem;
+    color: #363636;
+}
+.card-title {
+    font-size: 1.0rem;
+    font-weight: 700;
+}

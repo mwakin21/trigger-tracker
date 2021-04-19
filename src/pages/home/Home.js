@@ -10,13 +10,18 @@ const Home = (props) => {
                 spacing={6}
                 justify="flex-start"
                 alignItems="stretch"
-                xs={12} sm={10}
+                xs={12} md={12} lg={11}
             >
                 <Grid item container xs={12} justify="center" >
                     <Typography variant="h4" >
                         Home Page
                     </Typography>
                 </Grid>
+                {data.map((movie, key) => (
+                    <Grid item xs={12} sm={12} md={6} lg={4}>
+                        < MovieCard data={movie} key={key} />
+                    </Grid>
+                ))}
                 {data.map((movie, key) => (
                     <Grid item xs={12} sm={12} md={6} lg={4}>
                         < MovieCard data={movie} key={key} />

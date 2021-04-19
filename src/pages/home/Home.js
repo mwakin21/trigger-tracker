@@ -1,38 +1,29 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Grid, Typography } from '@material-ui/core';
+import { MovieCard } from '../../components/Card';
 
 const Home = (props) => {
     const data = props.data;
     return (
-        <div>
-            Home page
-            {data.map((movie, key) => (
-                <div>
-                    <div>
-                        <strong>
-                            Title: {movie.title}
-                        </strong>
-                    </div>
-                    <img src={movie.pictureUrl} alt={"movie poster for " + movie.title}
-                        width={360}
-                    />
-                        <div>
-                            <Link to={movie.url}>
-                                Link
-                            </Link>
-                        </div>
-                    <div>
-                        Description: {movie.description}
-                    </div>
-                    <div>
-                        Length: {movie.length.h}h, {movie.length.m}m
-                    </div>
-                    <div>
-                        Average Score: {movie.averageScore}
-                    </div>
-                </div>
-            ))}
-        </div>
+        <Grid container justify="center" style={{ marginTop: '3em' }} >
+            <Grid container
+                spacing={6}
+                justify="flex-start"
+                alignItems="stretch"
+                xs={12} sm={10}
+            >
+                <Grid item container xs={12} justify="center" >
+                    <Typography variant="h4" >
+                        Home Page
+                    </Typography>
+                </Grid>
+                {data.map((movie, key) => (
+                    <Grid item xs={12} sm={12} md={6} lg={4}>
+                        < MovieCard data={movie} key={key} />
+                    </Grid>
+                ))}
+            </Grid>
+        </Grid>
     )
 };
 

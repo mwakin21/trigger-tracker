@@ -8,10 +8,12 @@ import Home from './pages/home';
 import ReviewPage from './pages/review';
 import ReviewForm from './pages/form';
 import { data } from './pages/home/movie-data.js';
+import { StylesProvider, CssBaseline } from '@material-ui/core';
 
 function App() {
   return (
-    <div className="App">
+    <StylesProvider injectFirst>
+      <CssBaseline />
       <Router>
         {/* put Header here to apply to all pages */}
         <Switch>
@@ -32,8 +34,7 @@ function App() {
           {/* Add new pages here */}
         </Switch>
       </Router>
-
-    </div >
+    </StylesProvider>
   );
 }
 

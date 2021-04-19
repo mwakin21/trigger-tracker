@@ -15,7 +15,8 @@ function App() {
     <StylesProvider injectFirst>
       <CssBaseline />
       <Router>
-        {/* put Header here to apply to all pages */}
+        {<div><h1>Movie Photosensitivity Review Website</h1>
+          </div>}
         <Switch>
           <Route exact path={'/'} >
             <Home data={data} />

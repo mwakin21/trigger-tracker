@@ -22,11 +22,6 @@ const Home = (props) => {
                         < MovieCard data={movie} key={key} />
                     </Grid>
                 ))}
-                {data.map((movie, key) => (
-                    <Grid item xs={12} sm={12} md={6} lg={4}>
-                        < MovieCard data={movie} key={key} />
-                    </Grid>
-                ))}
             </Grid>
         </Grid>
     )

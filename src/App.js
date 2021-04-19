@@ -8,10 +8,12 @@ import Home from './pages/home';
 import ReviewPage from './pages/review';
 import ReviewForm from './pages/form';
 import { data } from './pages/home/movie-data.js';
-import './pages/review/format.css';
+import { StylesProvider, CssBaseline } from '@material-ui/core';
+
 function App() {
   return (
-    <div className="App">
+    <StylesProvider injectFirst>
+      <CssBaseline />
       <Router>
         {<div><h1>Movie Photosensitivity Review Website</h1>
           </div>}
@@ -33,8 +35,7 @@ function App() {
           {/* Add new pages here */}
         </Switch>
       </Router>
-
-    </div >
+    </StylesProvider>
   );
 }
 
